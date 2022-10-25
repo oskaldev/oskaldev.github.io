@@ -1,2 +1,2 @@
 # Glad to see you !
- My resume https://oskal314.github.io/resume/
+ My resume https://oskaldev.github.io/resume/
