@@ -20,7 +20,9 @@ table {
   margin: 0;
   float: right;
 }
-
+table tr td{
+  padding-bottom: 10px;
+}
 table tr td:first-child {
   padding-right: 5px;
 }
@@ -53,7 +55,7 @@ a:hover {
 }
 
 .intro {
-  margin: 150px 0 90px 0;
+  margin: 150px 0 20px 0;
   text-align: center;
 }
 
@@ -61,11 +63,6 @@ a:hover {
   margin-bottom: 10px;
   font-size: 22px;
   line-height: 40px;
-}
-
-.intro span.highlight {
-  background-color: rgb(40, 7, 113);
-  color: white;
 }
 
 .intro span.highlight-red {
