@@ -1,0 +1,129 @@
+.App {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.profileCard {
+  background-color: #181416;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.profileImage {
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.profileImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileInfo {
+  padding: 20px;
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profileInfo h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+.cv {
+  color: rgb(193, 22, 73);
+  font-weight: bold;
+}
+.profileInfo .position,
+.profileInfo,
+.cv {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-decoration: none !important;
+  border: none !important;
+}
+
+.profileInfo .position {
+  font-weight: bold;
+  color: #ffffff;
+}
+.cvLink {
+  text-decoration: none;
+}
+.socialLinks {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.socialLink {
+  background-color: #6f6a6e;
+  color: #ffffff;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.socialLink:hover {
+  background-color: #ffffff;
+}
+
+.socialLink img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Медиазапросы */
+@media (min-width: 768px) {
+  .profileCard {
+    flex-direction: row;
+  }
+
+  .profileImage {
+    width: 33.33%;
+    max-height: none;
+  }
+
+  .profileInfo {
+    width: 66.66%;
+    padding: 30px;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .profileInfo h1 {
+    font-size: 28px;
+  }
+
+  .profileInfo .age,
+  .profileInfo .position,
+  .profileInfo .company {
+    font-size: 18px;
+  }
+
+  .socialLinks {
+    justify-content: flex-start;
+  }
+}
