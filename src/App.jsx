@@ -1,7 +1,6 @@
 import styles from './App.module.css';
 import vkicon from './assets/vk-icon.svg';
-
-const snowCat = '/src/assets/snow-cat.webp';
+import snowCat from './assets/snow-cat.webp';
 
 function App() {
   new Snow({
@@ -18,7 +17,7 @@ function App() {
           <div className={styles.position}>Frontend developer</div>
           <a
             className={styles.cvLink}
-            href='https://github.com/oskaldev/resume/raw/main/doc/artem_kalantaryan_cv.pdf'>
+            href='https://github.com/oskaldev/oskaldev.github.io/blob/gh-pages/doc/artem_kalantaryan_cv.pdf'>
             <span className={styles.cv}>CV</span>
           </a>
           <div className={styles.socialLinks}>
