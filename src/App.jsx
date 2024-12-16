@@ -17,7 +17,7 @@ function App() {
           <div className={styles.position}>Frontend developer</div>
           <a
             className={styles.cvLink}
-            href='https://github.com/oskaldev/oskaldev.github.io/blob/gh-pages/doc/artem_kalantaryan_cv.pdf'>
+            href='https://github.com/oskaldev/resume/raw/gh-pages/doc/artem_kalantaryan_cv.pdf'>
             <span className={styles.cv}>CV</span>
           </a>
           <div className={styles.socialLinks}>
