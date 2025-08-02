@@ -14,7 +14,7 @@ function App() {
         </div>
         <div className={styles.profileInfo}>
           <h1>Артём Калантарян (oskaldev)</h1>
-          <div className={styles.position}>Frontend developer</div>
+          <div className={styles.position}>Backend developer</div>
           <a
             className={styles.cvLink}
             href='https://github.com/oskaldev/resume/raw/gh-pages/doc/artem_kalantaryan_cv.pdf'>
