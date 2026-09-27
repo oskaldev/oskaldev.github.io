@@ -5,14 +5,17 @@
         <img src="./assets/snow-cat.webp" alt="Профиль" />
       </div>
       <div class="profile-info">
+        <p class="greeting">👋 Hello!</p>
         <h1>Артём Калантарян (oskaldev)</h1>
-        <div class="position">Software Engineer | 3+ years | PHP</div>
-        <a
-          class="cv-link"
-          href="https://github.com/oskaldev/resume/raw/gh-pages/doc/artem_kalantaryan_cv.pdf"
-        >
-          <span class="cv">CV</span>
-        </a>
+        <div class="position">Software Engineer | 3.5 + years | PHP</div>
+        <div class="cv-links">
+          <a class="cv-link" :href="cvRu" download="artem_kalantaryan_cv_ru.pdf"
+            >CV RU</a
+          >
+          <a class="cv-link" :href="cvEn" download="artem_kalantaryan_cv_en.pdf"
+            >CV EN</a
+          >
+        </div>
         <div class="social-links">
           <a
             href="https://t.me/klartem"
@@ -83,15 +86,13 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "App",
-  mounted() {
-    new Snow({
-      snowBallIterationsInterval: 250,
-    });
-  },
-};
+<script setup>
+import cvRu from "./assets/artem_kalantaryan_cv_ru.pdf";
+import cvEn from "./assets/artem_kalantaryan_cv_en.pdf";
+
+new Snow({
+  snowBallIterationsInterval: 250,
+});
 </script>
 
 <style scoped>
@@ -138,20 +139,26 @@ export default {
   text-align: center;
 }
 
+.greeting {
+  margin: 0 0 4px;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #9a9499;
+}
+
 .profile-info h1 {
+  margin: 0 0 6px;
   font-size: 24px;
-  margin-bottom: 10px;
+  line-height: 1.2;
   color: #ffffff;
 }
 
-.cv {
-  color: rgb(193, 22, 73);
-  font-weight: bold;
+.profile-info .position {
+  margin-bottom: 14px;
 }
 
 .profile-info .position,
-.profile-info,
-.cv {
+.profile-info {
   font-size: 16px;
   margin-bottom: 10px;
   text-decoration: none !important;
@@ -164,7 +171,35 @@ export default {
 }
 
 .cv-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: #e0e0e0;
+  background-color: #262226;
+  border: 1px solid #3b3639;
+  border-radius: 999px;
   text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.cv-link:hover {
+  color: #ffffff;
+  background-color: #6f6a6e;
+  border-color: #6f6a6e;
+}
+
+.cv-links {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
 .social-links {
@@ -217,11 +252,19 @@ export default {
     font-size: 28px;
   }
 
+  .greeting {
+    font-size: 16px;
+  }
+
   .profile-info .position {
     font-size: 18px;
   }
 
   .social-links {
+    justify-content: flex-start;
+  }
+
+  .cv-links {
     justify-content: flex-start;
   }
 }
